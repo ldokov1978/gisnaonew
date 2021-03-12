@@ -2,105 +2,158 @@
 @import "fonts.less";
 
 body {
-	background-color: @background-def;
-	background-image: url(../img/BackSpace.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center center;
-	background-size: cover;
-	font-family: 'Bebas Neue';
+  background-color: @background-def;
+  background-image: url(../img/BackSpace.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  font-family: 'Bebas Neue';
 }
 
 .wrapper {
-	position: relative;
-	max-width: 1600px;
-	height: 100vh;
-	margin: 0 auto;
+  position: relative;
+  max-width: 1600px;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 .wrapper::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: @black-light;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: @black-light;
 }
 
 .head {
-	height: 100px;
-	padding: 25px;
-	box-sizing: border-box;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: @black-light;
+  height: 100px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @black-light;
 }
 
 .head-wrapper {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .head-brand {
-	display: block;
-	height: 50px;
-	margin-right: 25px;
-	box-sizing: border-box;
-	text-decoration: none;
-	z-index: 2;
-	transition: transform ease 0.5s, border ease 0.5s;
-	&:hover {
-		transform: scale(1.05);
-	}
+  display: block;
+  height: 50px;
+  margin: 0 25px 0 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  z-index: 2;
+  transition: transform ease 0.5s, border ease 0.5s;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .head-title {
-	width: 384px;
-	margin: 0;
-	padding: 0;
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 30px;
-	letter-spacing: 0.07em;
-	text-transform: uppercase;
-	color: @white;
-	z-index: 2;
+  width: 384px;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: @white;
+  z-index: 2;
 }
 
 .head-nav {
-	z-index: 2;
+  z-index: 2;
 }
 
 .head-nav-list {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	list-style: none;
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 30px;
-	letter-spacing: 0.07em;
-	text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
 .head-nav-item {
-	margin-left: 30px;
-	&:first-child {
-		margin: 0;
-	}
+  margin: 0 0 0 30px;
+  &:first-child {
+    margin: 0;
+  }
 }
 
 .head-nav-link {
-	display: block;
-	text-decoration: none;
-	color: @white;
-	transition: color ease 0.5s, transform ease 0.5s;
-	&:hover {
-		transform: scale(1.1);
-		color: @hover-link;
-	}
+  display: block;
+  text-decoration: none;
+  outline: none;
+  color: @white;
+  transition: color ease 0.5s, transform ease 0.5s;
+  &:hover {
+    transform: scale(1.1);
+    color: @hover-link;
+  }
+}
+
+.foot {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 25px;
+  z-index: 2;
+}
+
+.foot-niac-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  transition: transform ease 1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:hover .logo-niac-icon {
+    fill: @hover-link;
+  }
+  &:hover .logo-niac-icon-text {
+    fill: @hover-link;
+  }
+  &:hover .foot-niac-text {
+    color: @hover-link;
+  }
+}
+
+.logo-niac-icon {
+  fill: @white;
+  transition: fill ease 0.5s;
+}
+
+.logo-niac-icon-text {
+  fill: @white;
+  transition: fill ease 0.5s;
+}
+
+.foot-niac-text {
+  display: block;
+  margin: 0 0 0 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: @white;
+  transition: color ease 0.5s;
 }
