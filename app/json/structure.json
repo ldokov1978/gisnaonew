@@ -1,0 +1,220 @@
+{ "structure": [
+        {
+            "catName": "healthСare",
+            "catAlias": "Здравоохранение",
+            "catImage": "healthСare_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        },
+        {
+            "catName": "educationCultureSports",
+            "catAlias": "Образование, культура и спорт",
+            "catImage": "educationCultureSports_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        },
+        {
+            "catName": "naturalResources",
+            "catAlias": "Природные ресурсы",
+            "catImage": "naturalResources_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        },
+        {
+            "catName": "ecology",
+            "catAlias": "Экология",
+            "catImage": "ecology_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        },
+        {
+            "catName": "agroIndustrialComplex",
+            "catAlias": "Агропромышленный комплекс",
+            "catImage": "agroIndustrialComplex_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                },
+                {
+                    "appName": "appName_4",
+                    "appImage": "appImage_4"
+                },
+                {
+                    "appName": "appName_5",
+                    "appImage": "appImage_5"
+                }
+            ]
+        },
+        {
+            "catName": "housingUtilities",
+            "catAlias": "Жилищно-коммунальное хозяйство",
+            "catImage": "housingUtilities_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        },
+        {
+            "catName": "transport",
+            "catAlias": "Транспорт",
+            "catImage": "transport_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        },
+        {
+            "catName": "construction",
+            "catAlias": "Строительство",
+            "catImage": "construction_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        },
+        {
+            "catName": "informatizationCommunication",
+            "catAlias": "Информатизация и связь",
+            "catImage": "informatizationCommunication_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        },
+        {
+            "catName": "financeTourism",
+            "catAlias": "Финансы и туризм",
+            "catImage": "financeTourism_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        },
+        {
+            "catName": "municipalities",
+            "catAlias": "Муниципальные образования",
+            "catImage": "municipalities_image",
+            "catApps": [
+                {
+                    "appName": "appName_1",
+                    "appImage": "appImage_1"
+                },
+                {
+                    "appName": "appName_2",
+                    "appImage": "appImage_2"
+                },
+                {
+                    "appName": "appName_3",
+                    "appImage": "appImage_3"
+                }
+            ]
+        }
+    ]
+}
