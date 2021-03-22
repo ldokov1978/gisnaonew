@@ -8,13 +8,14 @@ $(document).ready(function () {
     request.onload = appsStructure;
 
     function appsStructure() {
-        const main = document.querySelector(".main");
+        const hexGrid = document.querySelector("#hexGrid");
         let mainHex = "";
 
         let appsStruct = JSON.parse(request.response);
-        appsStruct.structure.forEach((items, i) => {
-            mainHex += '<div class="main-category-icon"><img src="../img/hex.svg" alt="hex" height="200" width="174"></div>'
+        appsStruct.structure.forEach((items) => {
+            //console.log (items);
+            mainHex += `<li class="hex"><div class="hexIn"><a class="hexLink" href="#"><div class="hexImageWrapper">${items.catImage}</div><h2 class="hexTitle">${items.catAlias}</h2></a></div></li>`
         });
-        main.insertAdjacentHTML ('beforeend', mainHex);
+        hexGrid.insertAdjacentHTML ('beforeend', mainHex);
     }
 });

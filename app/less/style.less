@@ -24,7 +24,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: @black-dark;
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: -1;
   }
 }
@@ -35,12 +35,13 @@ body {
   left: 0;
   right: 0;
   height: 100px;
-  padding: 0 45px 0 45px;
+  padding: 0 25px 0 25px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: @black-dark;
+  z-index: 2;
   &-wrapper {
     margin: 0;
     padding: 0;
@@ -74,6 +75,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     font-size: 24px;
     font-weight: 400;
@@ -82,20 +85,22 @@ body {
     text-transform: uppercase;
   }
   &-nav-item {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 10px;
     &:first-child {
       margin: 0;
     }
   }
   &-nav-link {
     display: block;
+    padding: 10px;
+    border-radius: 3px;
     text-decoration: none;
     outline: none;
     color: @white;
-    transition: color ease 1s, transform ease 0.5s;
+    transition: color ease 0.5s, background-color ease 0.5s;
     &:hover {
-      transform: scale(1.1);
-      color: @hover-link;
+      color: @black;
+      background-color: @white-light-link;
     }
   }
 }
@@ -109,11 +114,106 @@ body {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 30px;
   box-sizing: border-box;
-  &-category-icon {
-    margin: -53px 0 0 0;
-  }
+  z-index: 1;
+}
+
+#hexGrid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;    
+}
+
+.hex {
+    position: relative;
+    visibility:hidden;
+    outline:1px solid transparent; 
+}
+
+.hex::after {
+    content:'';
+    display:block;
+    padding-bottom: 86.602%; 
+}
+
+.hexIn {
+    position: absolute;
+    width:96%;
+    padding-bottom: 110.851%; 
+    margin:0 2%;
+    overflow: hidden;
+    visibility: hidden;
+    outline:1px solid transparent; 
+    -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+    -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+    transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+}
+
+.hexIn * {
+    margin: 0;
+    padding: 0;    
+    position: absolute;
+    visibility: visible;
+    outline:1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hexLink {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+    -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+    transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+    transition: background-color ease 1s;
+    &:hover {
+      background-color: @black-light-link;
+    }
+    &:hover .hexImage-path {
+      fill: @white-light-link;
+    }
+    &:hover .hexTitle {
+      color: @white-light-link;
+    }
+}
+
+.hexImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -25% 0 0 0;
+  width: auto;
+  height: 40%;
+  font-size: 30%;
+}
+
+.hexImage {
+  height: 100%;
+  background-color: transparent;
+}
+
+.hexImage-path {
+  transition: fill ease 0.5s;
+  fill: @black;
+}
+
+.hexTitle {
+  margin: 55% 4% 0 4%;
+  font-weight: 900;
+  font-size: 99%;
+  letter-spacing: 0.12rem;
+  background-color: transparent;
+  transition: color ease 0.5s;
 }
 
 .foot {
@@ -121,6 +221,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 25px;
+  z-index: 2;
   &-niac-link {
     display: flex;
     align-items: center;
@@ -131,13 +232,10 @@ body {
       transform: scale(1.1);
     }
     &:hover .foot-niac-icon {
-      fill: @hover-link;
+      fill: @white-light-link;
     }
     &:hover .foot-niac-icon-text {
-      fill: @hover-link;
-    }
-    &:hover .foot-niac-text {
-      color: @hover-link;
+      fill: @white-light-link;
     }
   }
   &-niac-icon {
@@ -148,16 +246,6 @@ body {
     fill: @white;
     transition: fill ease 0.5s;
   }
-  &-niac-text {
-    display: block;
-    margin: 0 0 0 15px;
-    font-family: 'Century Gothic';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: @white;
-    transition: color ease 0.5s;
-  }
 }
+
+@import "media.less";
