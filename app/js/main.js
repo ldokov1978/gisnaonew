@@ -51,7 +51,7 @@ $(document).ready(function () {
   const burgerMenuTop = $('.burger-menu-top');
   const burgerMenuCenter = $('.burger-menu-center');
   const burgerMenuBottom = $('.burger-menu-bottom');
-  burgerMenu.addEventListener('click', burgerMenuToggle); // == Переключение бургер-меню по клику ==
+  burgerMenu.addEventListener('click', burgerMenuToggle);
   function burgerMenuToggle(e) {
     headNav.classList.toggle('head-nav-active');
     burgerMenuTop.classList.toggle('burger-menu-top-active');
