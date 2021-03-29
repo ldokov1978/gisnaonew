@@ -1,21 +1,18 @@
 window.onload = () => {
 
   class GetContent {
-    constructor(path, resMethod, resType) {
+    constructor(path) {
       this.path = path;
-      this.resMethod = resMethod;
-      this.resType = resType;
     }
-    fetchJSON() {
-      const xhr = new XMLHttpRequest();
-      xhr.open(this.resMethod, this.path);
-      xhr.responseType = this.resType;
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-          new Categories(xhr.response).renderCategories()
-        };
-      };
-      xhr.send();
+    
+    async fetchJSON() {
+
+      const response = await fetch (this.path);
+      if (response.ok) {
+        new Categories (await response.text()).renderCategories();
+      } else {
+        console.log (`Ошибка: ${response.status}`);
+      }
     }
   };
 
@@ -127,7 +124,7 @@ window.onload = () => {
     burgerMenuBottom.classList.toggle('burger-menu-bottom-active');
   };
 
-  new GetContent('../json/structure.json', 'GET', 'text').fetchJSON();
+  new GetContent('../json/structure.json').fetchJSON();
   new Menu('.head-nav-list').menuSelect();
 
 };
